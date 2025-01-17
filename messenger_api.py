@@ -1,4 +1,6 @@
 # messenger_api.py
+import os
+import uvicorn
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -136,3 +138,7 @@ def retrieve_messages(user: str, last_id: int = 0):
 @app.get("/")
 async def serve_root():
     return FileResponse("build/index.html")
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
