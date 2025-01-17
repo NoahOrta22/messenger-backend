@@ -139,6 +139,6 @@ def retrieve_messages(user: str, last_id: int = 0):
 async def serve_root():
     return FileResponse("build/index.html")
 
-if __name__ == "__main__":
+if __name__ == "__messenger_api__":
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run(app, host="0.0.0.0", port=port)
