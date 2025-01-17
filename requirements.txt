@@ -48,7 +48,6 @@ pyasn1-modules==0.2.8
 pycurl==7.44.1
 pydantic==2.4.2
 pydantic_core==2.10.1
-pygame==2.1.2
 Pygments==2.16.1
 pyparsing==3.0.7
 python-dateutil==2.8.2
